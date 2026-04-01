@@ -1,0 +1,278 @@
+@import "tailwindcss";
+/* @import "leaflet/dist/leaflet.css"; */
+
+@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
+@source "../../storage/framework/views/*.php";
+@source "../**/*.blade.php";
+@source "../**/*.js";
+
+/* Utility kecil tambahan */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.stat-card {
+    @apply rounded-[24px] text-white shadow-[0_20px_50px_rgba(59,130,246,0.15)];
+}
+
+.stat-card-top {
+    @apply h-[180px] p-6 sm:h-[190px] sm:p-7 md:h-[200px] md:p-8;
+}
+
+.stat-card-wide {
+    @apply h-[210px] p-6 sm:h-[220px] sm:p-7 md:h-[230px] md:p-8;
+}
+
+.stat-card-inner {
+    @apply flex h-full flex-col justify-between;
+}
+
+.stat-card-inner-center {
+    @apply flex h-full flex-col items-center justify-center text-center;
+}
+
+.stat-number {
+    @apply text-[36px] font-extrabold leading-none tracking-tight sm:text-[44px] md:text-[56px];
+}
+
+.stat-number-long {
+    @apply text-[30px] font-extrabold leading-none tracking-tight sm:text-[36px] md:text-[48px];
+}
+
+.stat-number-medium {
+    @apply text-[40px] font-extrabold leading-none tracking-tight sm:text-[48px] md:text-[60px];
+}
+
+.stat-number-wide {
+    @apply text-[42px] font-extrabold leading-none tracking-tight sm:text-[54px] md:text-[72px];
+}
+
+.stat-label {
+    @apply max-w-[15rem] text-[15px] leading-[1.45] font-medium text-white/95 sm:text-[16px] md:text-[18px];
+}
+
+.stat-label-center {
+    @apply mt-4 max-w-2xl text-[15px] leading-[1.4] font-medium text-white/95 sm:text-[16px] md:text-[20px];
+}
+
+/* .leaflet-container {
+    background: #f8fafc;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.map-tooltip {
+    border: 0;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.map-region-label {
+    @apply rounded-full bg-white px-3 py-1 text-xs font-medium text-slate-700 ring-1 ring-slate-200;
+} */
+
+.region,
+.district {
+    cursor: pointer;
+    stroke: #ffffff;
+    stroke-width: 3;
+    transition: 180ms ease;
+}
+
+.region.integrated {
+    fill: #0284c7;
+}
+
+.region.default-region {
+    fill: #cbd5e1;
+}
+
+.region:hover,
+.district:hover {
+    filter: brightness(1.06);
+    stroke: #0f172a;
+    stroke-width: 3.5;
+}
+
+.region-tegal {
+    filter: drop-shadow(0 6px 18px rgba(2, 132, 199, 0.28));
+}
+
+.district.impacted {
+    fill: #10b981;
+}
+
+.district.coming-soon {
+    fill: #cbd5e1;
+}
+
+.district.default-district {
+    fill: #dbeafe;
+}
+
+.svg-caption {
+    fill: rgba(15, 23, 42, 0.85);
+    font-size: 14px;
+    font-weight: 700;
+    text-anchor: middle;
+    pointer-events: none;
+}
+
+.faq-item.is-open {
+    border-color: rgb(186 230 253);
+    box-shadow: 0 18px 50px rgba(2, 132, 199, 0.08);
+}
+
+.faq-item.is-open .faq-icon {
+    background: rgb(239 246 255);
+    color: rgb(2 132 199);
+    border-color: rgb(186 230 253);
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+@media (max-width: 768px) {
+    section {
+        scroll-margin-top: 78px;
+    }
+}
+
+/* .footer-premium {
+    background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 45%, #2563eb 70%, #0ea5e9 100%);
+}
+
+.footer-gradient {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.10), transparent 22%),
+        radial-gradient(circle at 80% 30%, rgba(255,255,255,0.10), transparent 20%),
+        radial-gradient(circle at 60% 80%, rgba(255,255,255,0.08), transparent 18%);
+    animation: footerGradientShift 14s ease-in-out infinite alternate;
+}
+
+.footer-orb {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(60px);
+    opacity: 0.22;
+    pointer-events: none;
+}
+
+.footer-orb-1 {
+    width: 260px;
+    height: 260px;
+    left: -60px;
+    top: -40px;
+    background: rgba(125, 211, 252, 0.7);
+    animation: orbFloatOne 16s ease-in-out infinite;
+}
+
+.footer-orb-2 {
+    width: 300px;
+    height: 300px;
+    right: -90px;
+    top: 10px;
+    background: rgba(59, 130, 246, 0.65);
+    animation: orbFloatTwo 18s ease-in-out infinite;
+}
+
+.footer-orb-3 {
+    width: 220px;
+    height: 220px;
+    left: 45%;
+    bottom: -100px;
+    background: rgba(255, 255, 255, 0.22);
+    animation: orbFloatThree 20s ease-in-out infinite;
+}
+
+.footer-link {
+    position: relative;
+    display: inline-block;
+    transition: color 220ms ease, transform 220ms ease;
+}
+
+.footer-link:hover {
+    color: white;
+    transform: translateX(4px);
+}
+
+.footer-social {
+    display: flex;
+    height: 42px;
+    width: 42px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    color: white;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+    transition: transform 240ms ease, background-color 240ms ease, border-color 240ms ease;
+}
+
+.footer-social:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.24);
+}
+
+@keyframes footerGradientShift {
+    0% {
+        transform: scale(1) translate3d(0, 0, 0);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1.06) translate3d(-1%, 1%, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes orbFloatOne {
+    0%, 100% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(30px, 18px, 0);
+    }
+}
+
+@keyframes orbFloatTwo {
+    0%, 100% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(-28px, 24px, 0);
+    }
+}
+
+@keyframes orbFloatThree {
+    0%, 100% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(18px, -18px, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .footer-gradient,
+    .footer-orb-1,
+    .footer-orb-2,
+    .footer-orb-3 {
+        animation: none !important;
+    }
+
+    .footer-link:hover,
+    .footer-social:hover {
+        transform: none;
+    }
+} */

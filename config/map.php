@@ -1,0 +1,50 @@
+<?php
+
+return [
+    'jateng_integrated' => [
+        'Kota Semarang',
+        'Kota Surakarta',
+        'Kota Salatiga',
+        'Kota Tegal',
+        'Kabupaten Sukoharjo',
+        'Kabupaten Magelang',
+        'Kabupaten Pekalongan',
+        'Kabupaten Banyumas',
+        'Kabupaten Batang',
+        'Kabupaten Grobogan',
+        'Kabupaten Brebes',
+        'Kabupaten Jepara',
+        'Kabupaten Demak',
+        'Kabupaten Kendal',
+        'Kabupaten Pati',
+        'Kabupaten Pemalang',
+        'Kabupaten Rembang',
+        'Kabupaten Blora',
+        'Kabupaten Sragen',
+        'Kabupaten Tegal',
+    ],
+
+    'tegal_impacted' => [
+        'Kramat',
+        'Warurejo',
+        'Tarub',
+        'Pangkah',
+        'Slawi',
+        'Adiwerna',
+        'Dukuhturi',
+        'Talang',
+        'Lebaksiu',
+        'Balapulang',
+        'Bojong',
+        'Bumijawa',
+        'Jatinegara',
+        'Margasari',
+        'Kedungbanteng',
+        'Pagerbarang',
+        'Dukuhwaru',
+    ],
+
+    'tegal_coming_soon' => [
+        'Suradadi',
+    ],
+];
