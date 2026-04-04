@@ -7,78 +7,42 @@
         </div>
 
         <div class="grid grid-cols-1 gap-5 md:grid-cols-12">
-            {{-- Baris 1 --}}
-            <div class="md:col-span-2" data-aos="zoom-in-up" data-aos-delay="0">
-                <div class="stat-card stat-card-top bg-sky-600">
-                    <div class="stat-card-inner">
-                        <div class="stat-number"
-                             data-counter
-                             data-target="3"
-                             data-suffix="+">0+</div>
-                        <p class="stat-label">Tahun Dedikasi Konsisten</p>
-                    </div>
-                </div>
-            </div>
+            @foreach ($stats as $index => $stat)
+                @php
+                    $theme = $stat->theme === 'blue' ? 'bg-blue-800' : 'bg-sky-600';
 
-            <div class="md:col-span-3" data-aos="zoom-in-up" data-aos-delay="80">
-                <div class="stat-card stat-card-top bg-sky-600">
-                    <div class="stat-card-inner">
-                        <div class="stat-number"
-                             data-counter
-                             data-target="17000"
-                             data-suffix="+">0+</div>
-                        <p class="stat-label">Terdampak Tatap Muka</p>
-                    </div>
-                </div>
-            </div>
+                    $colClass = match($index) {
+                        0 => 'md:col-span-2',
+                        1 => 'md:col-span-3',
+                        2 => 'md:col-span-4',
+                        3 => 'md:col-span-3',
+                        4 => 'md:col-span-8',
+                        default => 'md:col-span-4',
+                    };
 
-            <div class="md:col-span-4" data-aos="zoom-in-up" data-aos-delay="160">
-                <div class="stat-card stat-card-top bg-sky-600">
-                    <div class="stat-card-inner">
-                        <div class="stat-number stat-number-long"
-                             data-counter
-                             data-target="1752000"
-                             data-suffix="+">0+</div>
-                        <p class="stat-label">Tayangan Edukasi di Media Sosial</p>
-                    </div>
-                </div>
-            </div>
+                    $cardClass = $index >= 4 ? 'stat-card stat-card-wide' : 'stat-card stat-card-top';
+                    $numberClass = $index === 2 ? 'stat-number-long' : ($index >= 4 ? ($index === 4 ? 'stat-number-wide' : 'stat-number-medium') : 'stat-number');
+                    $labelClass = $index >= 4 ? 'stat-label-center' : 'stat-label';
+                    $innerClass = $index >= 4 ? 'stat-card-inner-center' : 'stat-card-inner';
+                @endphp
 
-            <div class="md:col-span-3" data-aos="zoom-in-up" data-aos-delay="80">
-                <div class="stat-card stat-card-top bg-blue-800">
-                    <div class="stat-card-inner">
-                        <div class="stat-number"
-                             data-counter
-                             data-target="4200"
-                             data-suffix="+">0+</div>
-                        <p class="stat-label">Anggota PIK Remaja Terdampak</p>
-                    </div>
-                </div>
-            </div>
+                <div class="{{ $colClass }}" data-aos="zoom-in-up" data-aos-delay="{{ $index * 70 }}">
+                    <div class="{{ $cardClass }} {{ $theme }}">
+                        <div class="{{ $innerClass }}">
+                            <div class="{{ $numberClass }}"
+                                 data-counter
+                                 data-target="{{ $stat->value }}"
+                                 data-suffix="{{ $stat->suffix }}">
+                                0{{ $stat->suffix }}
+                            </div>
 
-            {{-- Baris 2 --}}
-            <div class="md:col-span-8" data-aos="zoom-in-up" data-aos-delay="0">
-                <div class="stat-card stat-card-wide bg-blue-800">
-                    <div class="stat-card-inner-center">
-                        <div class="stat-number-wide"
-                             data-counter
-                             data-target="38791">0</div>
-                        <p class="stat-label-center">Remaja Teredukasi Dimsum Kelor Lele</p>
+                            <p class="{{ $labelClass }}">
+                                {{ $stat->label }}
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="md:col-span-4" data-aos="zoom-in-up" data-aos-delay="160">
-                <div class="stat-card stat-card-wide bg-sky-600">
-                    <div class="stat-card-inner-center">
-                        <div class="stat-number-medium"
-                             data-counter
-                             data-target="127">0</div>
-                        <p class="stat-label-center">Aspirasi Terlayani</p>
-                        <p class="mt-1 text-sm text-white/85">melalui Ruang Aspirasi</p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
