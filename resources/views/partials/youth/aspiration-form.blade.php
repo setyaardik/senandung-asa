@@ -64,10 +64,6 @@
                             class="inline-flex justify-center rounded-full bg-blue-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-sky-600">
                         Kirim Aspirasi
                     </button>
-
-                    <p class="text-xs leading-6 text-slate-500">
-                        Tombol ini masih tampilan frontend. Nanti bisa disambungkan ke database, email, Google Form, atau WhatsApp.
-                    </p>
                 </div>
             </form>
         </div>
