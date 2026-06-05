@@ -7,10 +7,10 @@
 
     <div class="relative mx-auto max-w-7xl px-6 py-14 lg:px-10">
 
-        <div class="grid gap-12 md:grid-cols-3 items-start">
+        <div class="grid gap-16 lg:grid-cols-[2fr_1fr_1fr] items-start">
 
             {{-- BRAND --}}
-            <div>
+            <div class="max-w-md">
                 <div class="flex items-center gap-3">
                     <div class="h-12 w-12 overflow-hidden rounded-xl bg-white shadow">
                         <img src="{{ asset('images/logo.png') }}" class="h-full w-full object-cover">
@@ -26,24 +26,46 @@
                 </p>
             </div>
 
-            {{-- NAVIGASI --}}
+                        {{-- NAVIGASI --}}
             <div>
                 <h3 class="text-sm font-semibold uppercase tracking-widest text-sky-200">
                     Navigasi
                 </h3>
 
-                <ul class="mt-4 space-y-2 text-sm">
+                <ul class="mt-4 space-y-3 text-sm">
 
-                    <li><a href="/" class="hover:text-white transition">Beranda</a></li>
-                    <li><a href="/#stats" class="hover:text-white transition">Statistik</a></li>
-                    <li><a href="/#map" class="hover:text-white transition">Peta</a></li>
-                    <li><a href="/#faq" class="hover:text-white transition">FAQ</a></li>
-                    <li><a href="/#testimonials" class="hover:text-white transition">Testimoni</a></li>
-                    <li><a href="/#partners" class="hover:text-white transition">Mitra</a></li>
+                    <li>
+                        <a href="/"
+                            class="group inline-flex items-center gap-2 hover:text-white transition">
+                            Home
+                        </a>
+                    </li>
 
-                    <li class="pt-2">
-                        <a href="/ruang-program" class="font-semibold text-white hover:text-sky-200 transition">
-                            Ruang Program →
+                    <li>
+                        <a href="/ruang-program"
+                            class="group inline-flex items-center gap-2 hover:text-white transition">
+                            Ruang Program
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/ruang-inklusi"
+                            class="group inline-flex items-center gap-2 hover:text-white transition">
+                            Ruang Inklusi
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/ruang-meaningful-youth-participation"
+                            class="group inline-flex items-center gap-2 hover:text-white transition">
+                            Ruang MYP
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/ruang-cegah-stunting"
+                            class="group inline-flex items-center gap-2 hover:text-white transition">
+                            Ruang Stunting
                         </a>
                     </li>
 

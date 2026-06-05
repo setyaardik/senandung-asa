@@ -6,7 +6,7 @@
 
                 <div class="text-center mb-14">
                     <span class="px-4 py-2 bg-sky-100 text-sky-700 rounded-full text-sm font-semibold">
-                        Scientific Validation
+                        Validasi Ilmiah
                     </span>
 
                     <h2 class="mt-5 text-4xl font-black text-blue-950">
@@ -14,8 +14,7 @@
                     </h2>
 
                     <p class="mt-4 text-gray-600 max-w-3xl mx-auto leading-8">
-                        Hasil uji Wilcoxon menunjukkan adanya peningkatan signifikan
-                        pada aspek kemandirian pengguna setelah penggunaan prototipe SAHABAT.
+                        Hasil ini didapatkan dengan Uji Validasi oleh pakar, Caregivers, Observasi Langsung.
                     </p>
                 </div>
 

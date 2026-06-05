@@ -38,11 +38,11 @@ class YouthParticipationController extends Controller
             ],
             [
                 'title' => 'Audiensi Bersama BKKBN Jawa Tengah',
-                'description' => 'Duta Genre Jawa Tengah menyampaikan kondisi remaja dan permohonan dukungan terhadap pemenuhan hak remaja kepada BKKBN Provinsi Jawa Tengah.',
+                'description' => 'Duta dan Forum Genre Jawa Tengah menyampaikan kondisi remaja dan permohonan dukungan sebagai Rumah Generasi Berencana Provinsi Jawa Tengah.',
             ],
             [
-                'title' => 'Diskusi Partisipatif Bersama Wali Kota Tegal',
-                'description' => 'Duta Genre Jawa Tengah memperkenalkan Senandung Asa sebagai ruang partisipatif remaja di Kota Tegal.',
+                'title' => 'Audiensi dengan berbagai mitra sebagai penguatan Kolaborasi Pentahelix',
+                'description' => 'Penguatan Partisipasi Anak Muda yang Bermakna sebagai ruang partisipatif mitra hingga tingkat nasional, termasuk juga dengan Kepala Daerah se- Jawa Tengah dengan hasil Policy Brief yang ada.',
             ],
         ];
 

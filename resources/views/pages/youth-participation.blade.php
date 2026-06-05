@@ -8,6 +8,7 @@
     @include('partials.youth.reasons', ['reasons' => $reasons])
     @include('partials.youth.problems', ['problems' => $problems])
     @include('partials.youth.actions', ['actions' => $actions])
+    @include('partials.youth.impact-gallery')
     @include('partials.youth.aspiration-form', ['formFields' => $formFields])
 
     @include('partials.footer')

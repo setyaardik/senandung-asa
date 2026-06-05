@@ -47,12 +47,14 @@
                                         <img
                                             src="{{ asset('storage/' . $program->image) }}"
                                             alt="{{ $program->title }}"
-                                            class="h-[260px] w-full object-cover transition duration-500 group-hover:scale-[1.03] sm:h-[340px] lg:h-[420px]"
+                                            class="w-full object-contain transition duration-500 group-hover:scale-[1.02]"
                                         >
                                     @else
-                                        <div class="flex h-[260px] w-full items-center justify-center bg-slate-100 px-6 text-center text-slate-400 sm:h-[340px] lg:h-[420px]">
+
+                                        <div class="flex min-h-[420px] items-center justify-center bg-slate-100 px-6 text-center text-slate-400">
                                             Tambahkan foto program di admin panel
                                         </div>
+
                                     @endif
                                 </div>
                             </div>
@@ -65,12 +67,13 @@
                                         <img
                                             src="{{ asset('storage/' . $program->image) }}"
                                             alt="{{ $program->title }}"
-                                            class="h-[260px] w-full object-cover transition duration-500 group-hover:scale-[1.03] sm:h-[340px] lg:h-[420px]"
+                                            class="w-full object-contain transition duration-500 group-hover:scale-[1.02]"
                                         >
                                     @else
-                                        <div class="flex h-[260px] w-full items-center justify-center bg-slate-100 px-6 text-center text-slate-400 sm:h-[340px] lg:h-[420px]">
+                                        <div class="flex min-h-[420px] items-center justify-center bg-slate-100 px-6 text-center text-slate-400">
                                             Tambahkan foto program di admin panel
                                         </div>
+
                                     @endif
                                 </div>
                             </div>

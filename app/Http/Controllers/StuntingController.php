@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class StuntingController extends Controller
@@ -98,5 +99,48 @@ class StuntingController extends Controller
             'ingredients',
             'steps'
         ));
+    }
+
+    public function recommendation(Request $request)
+    {
+        $request->validate([
+            'umur' => 'required|numeric',
+            'tb' => 'required|numeric',
+            'bb' => 'required|numeric',
+        ]);
+
+        $umur = $request->umur;
+        $tb = $request->tb;
+        $bb = $request->bb;
+
+        $status = '';
+        $dimsum = 0;
+        $note = '';
+
+        // dummy logic sementara
+        if ($tb < 80 || $bb < 10) {
+
+            $status = 'Risiko Tinggi Stunting';
+            $dimsum = 4;
+            $note = 'Disarankan konsumsi rutin dengan protein tinggi dan pendampingan nutrisi.';
+
+        } elseif ($tb < 90 || $bb < 13) {
+
+            $status = 'Risiko Sedang';
+            $dimsum = 3;
+            $note = 'Perlu peningkatan asupan gizi dan pemantauan pertumbuhan berkala.';
+
+        } else {
+
+            $status = 'Normal';
+            $dimsum = 2;
+            $note = 'Pertumbuhan cukup baik, tetap jaga pola makan sehat dan seimbang.';
+        }
+
+        return back()->with([
+            'status_anak' => $status,
+            'jumlah_dimsum' => $dimsum,
+            'catatan_gizi' => $note,
+        ]);
     }
 }

@@ -3,11 +3,11 @@
 
         <div class="text-center mb-14">
             <span class="px-4 py-2 bg-sky-100 text-sky-700 rounded-full text-sm font-semibold">
-                Impact Documentation
+                Keberdampakan Program
             </span>
 
             <h2 class="mt-5 text-4xl font-black text-blue-950">
-                Bukti Keberdampakan
+                Potret Keberdampakan
             </h2>
 
             <p class="mt-4 text-gray-600 max-w-3xl mx-auto leading-8">

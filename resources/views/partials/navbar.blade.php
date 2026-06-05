@@ -2,6 +2,9 @@
     $currentPath = request()->path();
     $isHomePage = request()->is('/');
     $isProgramPage = request()->is('ruang-program');
+    $isInklusiPage = request()->is('ruang-inklusi');
+    $isMYPPage = request()->is('ruang-meaningful-youth-participation');
+    $isStuntingPage = request()->is('ruang-cegah-stunting');
 @endphp
 
 <header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-xl">
@@ -64,6 +67,30 @@
                     <span class="absolute -bottom-2 left-0 h-[2px] w-full rounded-full bg-sky-500"></span>
                 @endif
             </a>
+            <a href="{{ url('/ruang-inklusi') }}"
+               class="relative text-sm font-medium transition {{ $isInklusiPage ? 'text-sky-600' : 'text-slate-700 hover:text-sky-600' }}">
+                Ruang Inklusi
+
+                @if ($isInklusiPage)
+                    <span class="absolute -bottom-2 left-0 h-[2px] w-full rounded-full bg-sky-500"></span>
+                @endif
+            </a>
+            <a href="{{ url('/ruang-meaningful-youth-participation') }}"
+               class="relative text-sm font-medium transition {{ $isMYPPage ? 'text-sky-600' : 'text-slate-700 hover:text-sky-600' }}">
+                Ruang MYP
+
+                @if ($isMYPPage)
+                    <span class="absolute -bottom-2 left-0 h-[2px] w-full rounded-full bg-sky-500"></span>
+                @endif
+            </a>
+            <a href="{{ url('/ruang-cegah-stunting') }}"
+               class="relative text-sm font-medium transition {{ $isStuntingPage ? 'text-sky-600' : 'text-slate-700 hover:text-sky-600' }}">
+                Ruang Stunting
+
+                @if ($isStuntingPage)
+                    <span class="absolute -bottom-2 left-0 h-[2px] w-full rounded-full bg-sky-500"></span>
+                @endif
+            </a>
         </nav>
 
         {{-- MOBILE BUTTON --}}
@@ -100,6 +127,18 @@
             <a href="{{ url('/ruang-program') }}"
                class="block rounded-xl px-3 py-3 text-sm font-medium transition {{ $isProgramPage ? 'bg-sky-50 text-sky-600' : 'text-slate-700 hover:bg-sky-50 hover:text-sky-700' }}">
                 Ruang Program
+            </a>
+            <a href="{{ url('/ruang-inklusi') }}"
+               class="block rounded-xl px-3 py-3 text-sm font-medium transition {{ $isInklusiPage ? 'bg-sky-50 text-sky-600' : 'text-slate-700 hover:bg-sky-50 hover:text-sky-700' }}">
+                Ruang Inklusi
+            </a>
+            <a href="{{ url('/ruang-meaningful-youth-participation') }}"
+               class="block rounded-xl px-3 py-3 text-sm font-medium transition {{ $isMYPPage ? 'bg-sky-50 text-sky-600' : 'text-slate-700 hover:bg-sky-50 hover:text-sky-700' }}">
+                Ruang MYP
+            </a>
+            <a href="{{ url('/ruang-cegah-stunting') }}"
+               class="block rounded-xl px-3 py-3 text-sm font-medium transition {{ $isStuntingPage ? 'bg-sky-50 text-sky-600' : 'text-slate-700 hover:bg-sky-50 hover:text-sky-700' }}">
+                Ruang Stunting
             </a>
         </div>
     </div>

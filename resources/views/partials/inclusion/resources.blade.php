@@ -3,11 +3,11 @@
 
         <div class="text-center mb-14">
             <span class="px-4 py-2 bg-sky-100 text-sky-700 rounded-full text-sm font-semibold">
-                Resources & Education
+                Sumber Daya & Edukasi
             </span>
 
             <h2 class="mt-5 text-4xl font-black text-blue-950">
-                Modul Interaktif SAHABAT
+                Modul Interaktif Prototipe Senandung Asa
             </h2>
 
             <p class="mt-4 text-gray-600 max-w-3xl mx-auto leading-8">
@@ -73,7 +73,7 @@
     <div class="py-20 text-center mb-10">
         <a href="{{ asset('documents/modul-senandung-asa.pdf') }}"
             class="bg-blue-900 text-white px-6 py-3 rounded-full">
-            Download Modul SAHABAT
+            Download Modul Prototipe Senandung Asa
         </a>
     </div>
 

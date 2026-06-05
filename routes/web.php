@@ -7,6 +7,7 @@ use App\Http\Controllers\InclusionController;
 use App\Http\Controllers\InclusionArticleController;
 use App\Http\Controllers\StuntingController;
 use App\Http\Controllers\YouthParticipationController;
+use App\Http\Controllers\AspirationController;
 
 
 Route::get('/ruang-cegah-stunting', [StuntingController::class, 'index'])
@@ -19,3 +20,9 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/ruang-program', [ProgramController::class, 'index'])->name('programs.index');
 Route::get('/ruang-inklusi', [InclusionController::class, 'index'])
     ->name('inclusion.index');
+Route::post('/stunting/recommendation', [StuntingController::class, 'recommendation'])
+    ->name('stunting.recommendation');
+Route::post('/aspirasi', [
+    AspirationController::class,
+    'store'
+])->name('aspirations.store');

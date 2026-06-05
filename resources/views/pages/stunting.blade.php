@@ -13,11 +13,12 @@
         'moringaNutrition' => $moringaNutrition,
         'catfishNutrition' => $catfishNutrition,
     ])
+    <!-- @include('partials.stunting.recommendation') -->
     @include('partials.stunting.recipe', [
         'tools' => $tools,
         'ingredients' => $ingredients,
         'steps' => $steps,
     ])
-
+    @include('partials.stunting.impact-gallery')
     @include('partials.footer')
 @endsection

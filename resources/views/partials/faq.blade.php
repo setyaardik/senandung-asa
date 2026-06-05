@@ -24,9 +24,9 @@
                     >
                         <div class="flex items-start gap-4">
                             <div class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-sky-50 text-sky-600 ring-1 ring-sky-100">
-                                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none">
-                                    <path d="M12 18h.01M9.09 9a3 3 0 1 1 5.82 1c0 2-3 2-3 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                <span class="text-sm font-black">
+                                    {{ $index + 1 }}
+                                </span>
                             </div>
 
                             <span class="text-base font-semibold leading-7 text-slate-900 md:text-lg">
